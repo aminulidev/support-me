@@ -10,7 +10,7 @@ const PublicLayout = ({children}: Props) => {
         <main className="flex flex-col gap-4 min-h-screen items-center justify-center p-24">
             {children}
             <LightDarkToggle
-                className="fixed top-[cacl(50%-12px)] right-2"
+                className="fixed top-[calc(50%-12px)] right-2"
             />
         </main>
     );
