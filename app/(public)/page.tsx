@@ -6,7 +6,10 @@ import Link from "next/link";
 const HomePage = () => {
     return (
         <>
-            <h1 className="flex items-center gap-2"><PersonStandingIcon size={50} className="text-indigo-500" /> Support me</h1>
+            <h1 className="flex items-center gap-2">
+                <PersonStandingIcon size={50} className="text-primary" />
+                Support me
+            </h1>
             <p>The best dashboard to manage customer support</p>
             <div className="flex items-center gap-2">
                 <Button asChild>
