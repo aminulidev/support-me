@@ -9,6 +9,7 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
+import {useRouter} from "next/navigation";
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -16,6 +17,8 @@ const formSchema = z.object({
 })
 
 const LoginPage = () => {
+    const {push} = useRouter();
+
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -24,8 +27,9 @@ const LoginPage = () => {
         }
     });
 
-    const onSubmit = () => {
-        console.log("login successfully");
+    const onSubmit = (data: z.infer<typeof formSchema>) => {
+        console.log("login validation successfully", data);
+        push("/dashboad");
     }
 
     return (
