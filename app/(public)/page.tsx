@@ -8,7 +8,7 @@ const HomePage = () => {
         <>
             <h1 className="flex items-center gap-2">
                 <PersonStandingIcon size={50} className="text-primary" />
-                Support me
+                SupportMe
             </h1>
             <p>The best dashboard to manage customer support</p>
             <div className="flex items-center gap-2">
