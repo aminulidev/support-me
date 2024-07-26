@@ -29,7 +29,7 @@ const LoginPage = () => {
 
     const onSubmit = (data: z.infer<typeof formSchema>) => {
         console.log("login validation successfully", data);
-        push("/dashboad");
+        push("/dashboard");
     }
 
     return (
